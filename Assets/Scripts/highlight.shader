@@ -3,8 +3,8 @@
 		Properties
 		{
 			_MainTex("Texture",2D) = "white"{}
-			_Color("Main color", Color) = (0.3,0.8,0.5,1)
-			_OutlineColor("Outline color",Color) = (0,0,0,1)
+			_Color("Main color", Color) = (0.2,0.8,0.4,1)
+			_OutlineColor("Outline color",Color) = (0.2,0.8,0.4,1)
 			_OutlineWidth("Outline width", Range(1.0,5.0)) = 1.08
 		}
 		CGINCLUDE
