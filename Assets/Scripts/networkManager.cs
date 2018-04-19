@@ -14,7 +14,7 @@ public class networkManager : Photon.MonoBehaviour
 
     // Use this for initialization
     void Start () {
-        names = new string[] {"Casanova","Batman","Asleep","KissMe","Banana","Taco" };
+        names = new string[] {"Casanova","Batman","Jumanah","Olena","Banana","Taco", "flamingo" };
         PhotonNetwork.ConnectUsingSettings(VERSION);
         PhotonNetwork.autoJoinLobby = false;
         PhotonNetwork.playerName = UserID();
@@ -23,9 +23,9 @@ public class networkManager : Photon.MonoBehaviour
 
 
     public string UserID() {
-        string name = names[Random.Range(0,5)];
+        string name = names[Random.Range(0,names.Length)];
         if (PhotonNetwork.playerName == name)
-            return names[Random.Range(0, 4)];
+            return names[Random.Range(0, names.Length)];
         return name;
     }
 
@@ -43,7 +43,6 @@ public class networkManager : Photon.MonoBehaviour
 
     public void OnClick(Vector3 pos)
     {
-        Debug.Log("passed");
         spawn = pos; 
     }
 
